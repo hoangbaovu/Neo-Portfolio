@@ -1,0 +1,206 @@
+// Wrapper and base class
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  position: fixed;
+  height: 100%;
+  width: 200px;
+
+  @include media-breakpoint-down(xs) {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    z-index: 9999;
+  }
+}
+
+
+// Navbar alignment options
+//
+// Display the navbar across the entirety of the page or fixed it to the top or
+// bottom of the page.
+
+// Static top (unfixed, but 100% wide) navbar
+.navbar-static-top {
+  z-index: $zindex-navbar;
+
+  @include media-breakpoint-up(sm) {
+    @include border-radius(0);
+  }
+}
+
+// Fix the top/bottom navbars when screen real estate supports it
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: $zindex-navbar-fixed;
+  margin-bottom: 0; // override .navbar defaults
+
+  // Undo the rounded corners
+  @include media-breakpoint-up(sm) {
+    @include border-radius(0);
+  }
+}
+
+.navbar-fixed-top {
+  top: 0;
+}
+
+.navbar-fixed-bottom {
+  bottom: 0;
+}
+
+.navbar-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: $zindex-navbar-sticky;
+  width: 100%;
+
+  // Undo the rounded corners
+  @include media-breakpoint-up(sm) {
+    @include border-radius(0);
+  }
+}
+
+
+//
+// Brand/project name
+//
+
+.navbar-brand {
+  height: 150px;
+  position: relative;
+  width: 100%;
+
+  float: left;
+  margin-right: 1rem;
+  padding-top:    .25rem;
+  padding-bottom: .25rem;
+  font-size: $font-size-lg;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  > img {
+      display: block;
+      height: 80px;
+      position: absolute;  
+      top: 0;  
+      bottom: 0;  
+      left: 0;  
+      right: 0;  
+      margin: auto;
+  }
+
+  @include media-breakpoint-down(xs) {
+    float: none;
+    margin-right: 0;
+
+    > img {
+      position: relative;
+      height: 40px;
+      margin: 10px 20px;
+      float: left;
+    }
+  }
+}
+
+.navbar-toggleable-xs.collapse.in{
+  background-color: #f7f7f9;
+}
+
+.navbar-toggleable-xs.collapsing{
+  @extend .navbar-toggleable-xs.collapse.in;
+}
+
+
+.navbar-divider {
+  float: left;
+  width: 1px;
+  padding-top: .425rem;
+  padding-bottom: .425rem;
+  overflow: hidden;
+  margin-left:  $navbar-padding-horizontal;
+  margin-right: $navbar-padding-horizontal;
+
+  &:before {
+    content: '\00a0';
+  }
+}
+
+
+// Navbar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// Bootstrap JavaScript plugin.
+
+.navbar-toggler {
+  padding: .5rem .75rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  background: none;
+  border: $border-width solid transparent;
+  margin: 10px 15px -8px 0px;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+// Custom override for
+.navbar-toggleable {
+  &-xs {
+    @include media-breakpoint-up(sm) {
+      display: block !important;
+    }
+  }
+  &-sm {
+    @include media-breakpoint-up(md) {
+      display: block !important;
+    }
+  }
+}
+
+// Navigation
+//
+// Custom navbar navigation built on the base `.nav` styles.
+
+.navbar-nav {
+
+  .active {
+    background-color: #eee;
+    
+    .nav-link {
+      color: $brand-primary;
+      border-left: 5px solid $brand-primary;
+    }
+  }
+
+  li {
+    border-bottom: 1px solid #eee;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  .nav-link {
+    border-left: 5px solid rgba(0,0,0,0);
+    color: #9e9e9e;
+    display: block;
+    padding: 1rem;
+
+    + .nav-link {
+      margin-left: 1rem;
+    }
+  }
+
+  .nav-item + .nav-item {
+    margin-left: 1rem;
+  }
+}

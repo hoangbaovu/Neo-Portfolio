@@ -1,0 +1,67 @@
+.author {
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  font-size: .8em;
+  border: solid #dcdcdc;
+  border-width: 1px 0;
+  margin: 20px 0;
+
+  p {
+    margin: 5px;
+  }
+}
+
+#author-avatar {
+  margin: 10px;
+  border: 3px solid #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header-title {
+  color: #2e2e2e;
+  margin-top: 40px;
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 20px;
+  }
+}
+
+.header-time {
+  color: #a8a3ae;
+  font-size: 0.8em;
+}
+
+.content-container {
+  @include media-breakpoint-down(xs) {
+    margin-top: 80px;
+  }
+
+}
+
+.article-body {
+  p, ul, ol, dl {
+    font-size: 1em;
+    line-height: 1.8;
+    margin: 0px 0px 2.5rem;
+  }
+}
+
+
+.byline {
+  display: inline-block;
+
+  p {
+    line-height: normal;
+  }
+
+  .brand {
+    color: #6f757a;
+  }
+
+  .mailto {
+    text-decoration: none;
+  }
+}

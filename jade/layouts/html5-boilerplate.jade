@@ -1,0 +1,17 @@
+include ../mixins/mixins.jade
+doctype html
+html.no-js(amp, lang="vi", prefix="og: http://ogp.me/ns#")
+  head
+    title
+      block title
+    block meta
+    +css('assets/css/theme.css')
+    block styles
+  body
+    block body
+    block footer
+    +script('../bower_components/jquery/dist/jquery.min.js')
+    //- +script('../bower_components/modernizr/modernizr.js')
+    +script('../bower_components/bootstrap/dist/js/bootstrap.min.js')
+    +script('scripts/main.js')
+    block script

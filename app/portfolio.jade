@@ -1,0 +1,106 @@
+extends ../jade/layouts/html5-boilerplate.jade
+
+block title
+  | Hoàng Bảo Vũ | Front-end Developer
+
+block meta
+  +MetaBasic
+  +DataMeta(
+    {
+      "description" : "Mình tên là Hoàng Bảo Vũ, hiện đang sống tại Huế, Việt Nam. Mình thích phát triển web và luôn áp dụng các kỹ thuật mới nhất với HTML, CSS.",
+    },{
+      "title" : "Hoàng Bảo Vũ | Front-end Developer",
+      "description" : "Mình tên là Hoàng Bảo Vũ, hiện đang sống tại Huế, Việt Nam. Mình thích phát triển web và luôn áp dụng các kỹ thuật mới nhất với HTML, CSS.",
+      "url" : "//ineo.vn",
+      "image" : "//ineo.vn/anh"
+    })
+
+block styles
+
+block body
+  header
+    nav.navbar.navbar-light.bg-faded
+      button.navbar-toggler.hidden-sm-up.pull-right(type="button", data-toggle="collapse", data-target="#navbar")
+        | &#9776;
+      a.navbar-brand(href="#")
+        img(src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iLTE3OC4yIDE2NiA0NDAgMjcwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC0xNzguMiAxNjYgNDQwIDI3MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6IzI1ODJDMTt9DQoJLnN0MXtkaXNwbGF5Om5vbmU7ZmlsbDojMjU4MkMxO30NCgkuc3Qye2ZpbGw6IzIxOTZGMzt9DQoJLnN0M3tkaXNwbGF5Om5vbmU7fQ0KCS5zdDR7ZGlzcGxheTppbmxpbmU7fQ0KCS5zdDV7ZmlsbDojMzBENkFCO30NCjwvc3R5bGU+DQo8ZyBpZD0iTGF5ZXJfMSI+DQoJPGcgaWQ9IkxheWVyXzQiPg0KCQk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjE0OS44LDE2NiAtMTc4LjIsMzY3IC02Ni4yLDQzNS41IDI1OS43LDIzMS41IAkJIi8+DQoJPC9nPg0KCTxwb2x5Z29uIGlkPSJYTUxJRF8zXyIgY2xhc3M9InN0MSIgcG9pbnRzPSIxNDkuOCwxNjYgLTY2LjIsMzAwLjkgLTY2LjIsNDM1LjUgMTQ5LjgsMzAwLjMgCSIvPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDIiIHBvaW50cz0iMTQ5LjgsMTY2IDE0OS44LDMwMCAtNjYuMiwxNjYgLTE3OC4yLDIzMyAtMTc4LjIsMzY3IC02Ni4yLDQzNS41IC02Ni4yLDMwMSAxNDkuOCw0MzUuNSAyNjEuOCwzNjYuNiANCgkJMjYxLjgsMjMyLjggCSIvPg0KCTxnIGlkPSJMYXllcl82Ij4NCgk8L2c+DQo8L2c+DQo8ZyBpZD0iTGF5ZXJfMl8xXyIgY2xhc3M9InN0MyI+DQoJPGcgY2xhc3M9InN0NCI+DQoJCQ0KCQkJPGltYWdlIHN0eWxlPSJvdmVyZmxvdzp2aXNpYmxlO29wYWNpdHk6MC4zOyIgd2lkdGg9IjY4MCIgaGVpZ2h0PSI3NDAiIHhsaW5rOmhyZWY9IkJFODlGREM5LnBuZyIgIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgLTUyNiAtNzApIj4NCgkJPC9pbWFnZT4NCgkJPGc+DQoJCQkNCgkJCQk8aW1hZ2Ugc3R5bGU9Im92ZXJmbG93OnZpc2libGU7b3BhY2l0eTowLjkzOyIgd2lkdGg9IjMxMCIgaGVpZ2h0PSI0MzQiIHhsaW5rOmhyZWY9IkJFODlGRENBLnBuZyIgIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgLTM0MSA4MykiPg0KCQkJPC9pbWFnZT4NCgkJCTxnPg0KCQkJCTxwYXRoIGNsYXNzPSJzdDUiIGQ9Ik0tMTkwLjgsMjMzLjVoOS4zdjEzMy4zaC05LjNWMjMzLjV6Ii8+DQoJCQk8L2c+DQoJCTwvZz4NCgk8L2c+DQoJPGcgY2xhc3M9InN0NCI+DQoJCQ0KCQkJPGltYWdlIHN0eWxlPSJvdmVyZmxvdzp2aXNpYmxlO29wYWNpdHk6MC4zOyIgd2lkdGg9IjY4MSIgaGVpZ2h0PSI3NDUiIHhsaW5rOmhyZWY9IkJFODlGREM4LnBuZyIgIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgLTc0IC03MikiPg0KCQk8L2ltYWdlPg0KCQk8Zz4NCgkJCQ0KCQkJCTxpbWFnZSBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTtvcGFjaXR5OjAuOTM7IiB3aWR0aD0iMzExIiBoZWlnaHQ9IjQzNSIgeGxpbms6aHJlZj0iQkU4OUZERUIucG5nIiAgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAxMTEgODMpIj4NCgkJCTwvaW1hZ2U+DQoJCQk8Zz4NCgkJCQk8cmVjdCB4PSIyNjEuOCIgeT0iMjMzLjMiIGNsYXNzPSJzdDUiIHdpZHRoPSI5LjMiIGhlaWdodD0iMTMzLjkiLz4NCgkJCTwvZz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjxnIGlkPSJMYXllcl8zXzFfIj4NCjwvZz4NCjwvc3ZnPg0K")
+      .clearfix
+      #navbar.collapse.navbar-toggleable-xs
+        ul.nav.navbar-nav.list-unstyled
+          li.active
+            a.nav-link(href="#") About
+          li
+            a.nav-link(href="/portfolio.html") Portfolio
+          li
+            a.nav-link(href="#") Blog
+  main(role="main")
+    .jumbotron.text-center
+      .container
+        h2.text-name I'm Neo
+        .col-md-8.col-md-offset-2.col-xs-12
+          .browser-ui.text-left
+            .frame
+              span.circle
+              span.circle
+              span.circle
+            pre
+              code
+                span doctype html
+                span html(lang="vi")
+                span  head
+                span    title Hoàng Bảo Vũ
+                span    meta( name="description", content="Front-end Developer")
+                span    +css('styles/main.css')
+    section.home#hello
+      .container
+        .row
+          .col-md-12
+            article
+              figure
+                +img('images/me/me.svg', 'Hoàng Bảo Vũ')
+              h3 Hi!
+              p.text-about 
+                | Mình tên là Bảo Vũ, hiện đang sống tại Huế, Việt Nam.
+                | Mình thích phát triển web và luôn áp dụng các kỹ thuật mới nhất với HTML, CSS.
+    .breaker
+    .clearfix
+
+    section.home#what-i-do
+      .container
+        article
+          h2 Những gì mình làm
+          #ineo-design.row
+            .col-lg-4.col-lg-offset-1.col-sm-12
+              .info
+                figure
+                  +img('images/me/me.svg', 'ineo design')
+                .circle.right
+                  .design-icons
+            .col-lg-6.col-sm-12
+              h4 Thiết kế những gì bạn muốn
+              p Mình thích sự đơn giản. Mục tiêu của mình là tập trung vào kiểu chữ, nội dung và truyền đạt những thông điệp mà bạn muốn gửi tới người xem.
+          #ineo-develop.row
+            .col-lg-4.col-lg-push-6.col-lg-offset-1.col-sm-12
+              .info
+                figure
+                  +img('images/me/me-dev.svg', 'ineo develop')
+                .circle.left
+                  .develop-icons.pull-right
+            .col-lg-6.col-lg-pull-4.col-sm-12
+              h4 Phát triển những gì bạn cần
+              p Mình là một nhà phát triển, vì vậy mình biết làm thế nào để tạo ra trang web của bạn có thể hoạt động tốt trên các thiết bị, cho dù đó là một máy tính, điện thoại di động hay máy tính bảng.
+    .breaker
+    .clearfix
+
+    section.home#i-can-help
+      .container
+        .row
+          .col-md-12
+            article
+              h2 Mình có thể giúp bạn!
+              h4 Mình luôn sẵn sàng cho công việc freelance
+              p Nếu bạn quan tâm tới những thông tin trên hay muốn tìm hiểu kỹ hơn, hãy liên hệ với mình! 
+              p
+                a.btn.btn-primary.btn-flat.btn-lg(href="mailto:baovuhbv@gmail.com?subject=Hello!", title="Gửi email đến địa chỉ baovuhbv@gmail.com") Nhắn tin!
+block footer
+block script

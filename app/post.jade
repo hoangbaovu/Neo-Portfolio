@@ -1,0 +1,65 @@
+extends ../jade/layouts/html5-boilerplate.jade
+
+block title
+  | Blog chia sẻ kiến thức
+
+block meta
+  +MetaBasic
+  +DataMeta(
+    {
+      "description" : "Mình tên là Hoàng Bảo Vũ, hiện đang sống tại Huế, Việt Nam. Mình thích phát triển web và luôn áp dụng các kỹ thuật mới nhất với HTML, CSS.",
+    },{
+      "title" : "Blog chia sẻ kiến thức",
+      "description" : "Mình tên là Hoàng Bảo Vũ, hiện đang sống tại Huế, Việt Nam. Mình thích phát triển web và luôn áp dụng các kỹ thuật mới nhất với HTML, CSS.",
+      "url" : "//ineo.vn",
+      "image" : "//ineo.vn/anh"
+    })
+  
+block styles
+
+block body
+  header
+    nav.navbar.navbar-light.bg-faded
+      button.navbar-toggler.hidden-sm-up.pull-right(type="button", data-toggle="collapse", data-target="#navbar")
+        | &#9776;
+      a.navbar-brand(href="#")
+        +img('assets/images/logo/neo-logo.svg','ineo logo')
+      .clearfix
+      #navbar.collapse.navbar-toggleable-xs
+        ul.nav.navbar-nav.list-unstyled
+          li
+            a.nav-link(href="/") About
+          li
+            a.nav-link(href="/portfolio.html") Portfolio
+          li.active
+            a.nav-link(href="/blog.html") Blog
+  main(role="main")
+
+    article(itemscope itemtype="https://schema.org/BlogPosting")
+      .container
+        .col-md-10.col-md-offset-1.content-container
+          header
+            figure
+              +img('assets/images/logo/neo-logo.svg','ineo logo')
+            h1.header-title(itemprop="headline") Lorem Ipsum
+            time.header-time(
+              itemprop="datePublished"
+              datetime="2015-09-14 13:00") September 14, 2015
+          .author
+            img#author-avatar( 
+              src="assets/images/me/me.svg"
+              height="50"
+              width="50")
+            .byline
+              p
+                span(
+                  itemscope
+                  itemtype="http://schema.org/Person"
+                  itemprop="author"
+                  )
+                  a.mailto(href="mailto:baovuhbv@gmail.com") hoangbaovu
+              p.brand Chuyên mục Hướng dẫn
+          .article-body(itemprop="articleBody")
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis exercitationem suscipit magni. Aperiam itaque molestiae tenetur aliquam animi cum blanditiis, impedit unde soluta, consectetur esse vitae odio assumenda consequatur debitis quidem pariatur velit dolor quisquam. Saepe sint dicta veritatis veniam, ducimus officiis quo recusandae commodi, officia magni voluptas nam maxime.
+block footer
+block script

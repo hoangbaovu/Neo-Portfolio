@@ -1,0 +1,115 @@
+extends ../jade/layouts/html5-boilerplate.jade
+
+block title
+  | Hoàng Bảo Vũ | Front-end Developer
+block meta
+  +MetaBasic
+  +DataMeta(
+    {
+      "description" : "Mình tên là Hoàng Bảo Vũ, hiện đang sống tại Huế, Việt Nam. Mình thích phát triển web và luôn áp dụng các kỹ thuật mới nhất với HTML, CSS.",
+    },{
+      "title" : "Hoàng Bảo Vũ | Front-end Developer",
+      "description" : "Mình tên là Hoàng Bảo Vũ, hiện đang sống tại Huế, Việt Nam. Mình thích phát triển web và luôn áp dụng các kỹ thuật mới nhất với HTML, CSS.",
+      "url" : "//ineo.vn",
+      "image" : "//ineo.vn/anh"
+    })
+
+
+block styles
+
+block body
+  header
+    nav.navbar.navbar-light.bg-faded
+      button.navbar-toggler.hidden-sm-up.pull-right(type="button", data-toggle="collapse", data-target="#navbar")
+        | &#9776;
+      a.navbar-brand(href="#")
+        +img('assets/images/logo/neo-logo.svg','ineo logo')
+      .clearfix
+      #navbar.collapse.navbar-toggleable-xs
+        ul.nav.navbar-nav.list-unstyled
+          li.active
+            a.nav-link(href="/")
+              i.fa.fa-user
+              | About
+          li
+            a.nav-link(href="/portfolio.html")
+              i.fa.fa-briefcase
+              | Portfolio
+          li
+            a.nav-link(href="/blog.html")
+              i.fa.fa-pencil
+              | Blog
+
+  main(role="main")
+    .jumbotron.text-center
+      .container
+        h2.text-name I'm Neo
+        .col-md-8.col-md-offset-2.col-xs-12
+          .browser-ui.text-left
+            .frame
+              span.circle
+              span.circle
+              span.circle
+            pre
+              code
+                span doctype html
+                span html(lang="vi")
+                span  head
+                span    title Hoàng Bảo Vũ
+                span    meta( name="description", content="Front-end Developer")
+                span    +css('styles/main.css')
+    section.home#hello
+      .container
+        .row
+          .col-md-12
+            article
+              figure
+                +img('assets/images/me/me.svg','Hoàng Bảo Vũ')
+              h3 Hi!
+              p.text-about 
+                | Mình tên là Hoàng Bảo Vũ, hiện đang sống tại Huế, Việt Nam.
+                | Mình thích phát triển web và luôn áp dụng các kỹ thuật mới nhất với HTML, CSS.
+    .breaker
+    .clearfix
+
+    section.home#what-i-do
+      .container
+        article
+          h2 Những gì mình làm
+          #ineo-design.row
+            .col-lg-4.col-lg-offset-1.col-sm-12
+              .info
+                figure
+                  +img('assets/images/me/me.svg','ineo design')
+                .circle.right
+                  .design-icons
+            .col-lg-6.col-sm-12
+              h4 Thiết kế những gì bạn muốn
+              p Mình thích sự đơn giản. Mục tiêu của mình là tập trung vào kiểu chữ, nội dung và truyền đạt những thông điệp mà bạn muốn gửi tới người xem.
+          #ineo-develop.row
+            .col-lg-4.col-lg-push-6.col-lg-offset-1.col-sm-12
+              .info
+                figure
+                  +img('assets/images/me/me-dev.svg','ineo develop')
+                .circle.left
+                  .develop-icons.pull-right
+            .col-lg-6.col-lg-pull-4.col-sm-12
+              h4 Phát triển những gì bạn cần
+              p Mình là một nhà phát triển, vì vậy mình biết làm thế nào để tạo ra trang web của bạn có thể hoạt động tốt trên các thiết bị, cho dù đó là một máy tính, điện thoại di động hay máy tính bảng.
+    .breaker
+    .clearfix
+
+    section.home#i-can-help
+      .container
+        .row
+          .col-md-12
+            article
+              h2 Mình có thể giúp bạn!
+              h4 Mình luôn sẵn sàng cho công việc freelance
+              p Nếu bạn quan tâm tới những thông tin trên hay muốn tìm hiểu kỹ hơn, hãy liên hệ với mình! 
+              p
+                a.btn.btn-primary.btn-flat.btn-lg(href="mailto:baovuhbv@gmail.com?subject=Hello! Neo", title="Gửi email đến địa chỉ baovuhbv@gmail.com")
+                  i.fa.fa-envelope
+                  | Nhắn tin!
+block footer
+block script

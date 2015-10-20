@@ -1,0 +1,15 @@
+mixin MetaBasic
+  meta( charset="utf-8" )
+  meta( http-equiv="X-UA-Compatible", content="IE=edge" )
+  meta( name="viewport", content="width=device-width, initial-scale=1" )
+  link( rel="shortcut icon", href="favicon.ico")
+
+  meta(property="og:locale", content="vi_VN") 
+  meta(property="og:type", content="Website") 
+  meta(property="og:site_name", content="Hoang Bao Vu") 
+
+mixin DataMeta( other, ogpData)
+  each val, index in other
+    meta(property="#{index}", content="#{val}")
+  each val, index in ogpData
+    meta(property="og:#{index}", content="#{val}")
