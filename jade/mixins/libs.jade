@@ -7,6 +7,28 @@ mixin script(link)
 mixin img(link, alt)
   img(src=link, alt=alt)
 
+mixin top-nav(active)
+  nav.navbar.navbar-light.bg-faded
+    button.navbar-toggler.hidden-sm-up.pull-right(type="button", data-toggle="collapse", data-target="#navbar")
+      | &#9776;
+    a.navbar-brand(href="/")
+      +img('assets/images/logo/neo-logo.svg','ineo logo')
+    .clearfix
+    #navbar.collapse.navbar-toggleable-xs
+      ul.nav.navbar-nav.list-unstyled
+        li(class=(active=='home' ? 'active' : ''))
+          a.nav-link(href="/")
+            i.fa.fa-user
+            | About
+        li(class=(active=='portfolio' ? 'active' : ''))
+          a.nav-link(href="/portfolio.html")
+            i.fa.fa-briefcase
+            | Portfolio
+        li(class=(active=='blog' ? 'active' : ''))
+          a.nav-link(href="/blog.html")
+            i.fa.fa-pencil
+            | Blog
+
 mixin GoogleAnalytics(UA)
   script.
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

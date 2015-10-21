@@ -19,31 +19,46 @@ block styles
 
 block body
   header
-    nav.navbar.navbar-light.bg-faded
-      button.navbar-toggler.hidden-sm-up.pull-right(type="button", data-toggle="collapse", data-target="#navbar")
-        | &#9776;
-      a.navbar-brand(href="#")
-        +img('assets/images/logo/neo-logo.svg','ineo logo')
-      .clearfix
-      #navbar.collapse.navbar-toggleable-xs
-        ul.nav.navbar-nav.list-unstyled
-          li
-            a.nav-link(href="/") About
-          li
-            a.nav-link(href="/portfolio.html") Portfolio
-          li.active
-            a.nav-link(href="/blog.html") Blog
-  main(role="main")
+    +top-nav('blog')
 
-    article(itemscope itemtype="https://schema.org/BlogPosting")
-      .container
-        .col-md-10.col-md-offset-1.content-container
-          header
-            h1.header-title(itemprop="headline") Lorem Ipsum
-            time.header-time(
-              itemprop="datePublished"
-              datetime="2015-09-14 13:00") September 14, 2015
-          .article-body(itemprop="articleBody")
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis exercitationem suscipit magni. Aperiam itaque molestiae tenetur aliquam animi cum blanditiis, impedit unde soluta, consectetur esse vitae odio assumenda consequatur debitis quidem pariatur velit dolor quisquam. Saepe sint dicta veritatis veniam, ducimus officiis quo recusandae commodi, officia magni voluptas nam maxime.
+  main(role="main")
+    .container-fluid
+        .card-columns
+          .card
+            img.card-img-top(src="https://unsplash.it/500x900/?random", alt="Card image cap")
+            .card-block
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              p.card-text
+                small.text-muted Last updated 3 mins ago
+          .card
+            img.card-img-top(src="https://unsplash.it/400/?random", alt="Card image cap")
+            .card-block
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              p.card-text
+                small.text-muted Last updated 3 mins ago
+          .card
+            img.card-img-top(src="https://unsplash.it/500x600/?random", alt="Card image cap")
+            .card-block
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              p.card-text
+                small.text-muted Last updated 3 mins ago
+          .card
+            img.card-img-top(src="https://unsplash.it/500x300", alt="Card image cap")
+            .card-block
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              p.card-text
+                small.text-muted Last updated 3 mins ago
+          .card
+            img.card-img-top(src="https://unsplash.it/400/?random", alt="Card image cap")
+            .card-block
+              h4.card-title Card title
+              p.card-text This card has supporting text below as a natural lead-in to additional content.
+              p.card-text
+                small.text-muted Last updated 3 mins ago
+
 block footer
 block script

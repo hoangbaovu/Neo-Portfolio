@@ -19,22 +19,8 @@ block styles
 
 block body
   header
-    nav.navbar.navbar-light.bg-faded
-      button.navbar-toggler.hidden-sm-up.pull-right(type="button", data-toggle="collapse", data-target="#navbar")
-        | &#9776;
-      a.navbar-brand(href="#")
-        +img('assets/images/logo/neo-logo.svg','ineo logo')
-      .clearfix
-      #navbar.collapse.navbar-toggleable-xs
-        ul.nav.navbar-nav.list-unstyled
-          li
-            a.nav-link(href="/") About
-          li
-            a.nav-link(href="/portfolio.html") Portfolio
-          li.active
-            a.nav-link(href="/blog.html") Blog
+    +top-nav('blog')
   main(role="main")
-
     article(itemscope itemtype="https://schema.org/BlogPosting")
       .container
         .col-md-10.col-md-offset-1.content-container
